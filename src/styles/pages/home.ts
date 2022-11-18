@@ -3,12 +3,21 @@ import { styled } from "..";
 export const HomeContainer = styled('main', {
     display: 'flex',
     width: '100%',
-    maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
     marginLeft: 'auto',
-    minHeight: 656
+    minHeight: 656,
 })
 
-export const Product = styled('a', {
+export const Overflow = styled('div', {
+    width: '100vw',
+    height: '100vh',
+    position: 'fixed',
+    zIndex: 1,
+    justifyContent: 'center',
+    background: 'linear-gradient(90deg, rgba(18,18,20,1) 0%, rgba(45,45,45,0) 5%, rgba(45,45,45,0) 95%, rgba(18,18,20,1) 100%)',
+    alignItems: 'center'
+})
+
+export const Product = styled('div', {
     background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
     borderRadius: 8,
     cursor: 'pointer',
@@ -43,7 +52,8 @@ export const Product = styled('a', {
         transition: 'all 0.2s ease-in-out',
 
         strong: {
-            fontSize: '$lg'
+            fontSize: '$lg',
+            color: '$gray100'
         },
 
         span: {

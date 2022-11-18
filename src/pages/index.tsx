@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { HomeContainer, Product } from "../styles/pages/home";
+import { HomeContainer, Overflow, Product } from "../styles/pages/home";
+
+import Link from "next/link";
 
 import { useKeenSlider } from 'keen-slider/react';
-
-import camisa3 from '../assets/camisetas/3.png';
 
 import 'keen-slider/keen-slider.min.css';
 
@@ -23,21 +23,25 @@ interface HomeProps {
 export default function Home({ products }: HomeProps) {
   const [sliderRef] = useKeenSlider({
     slides: {
-      perView: 3,
-      spacing: 48
+      perView: 2,
+      spacing: 48,
+      origin: "center"
     }
   })
   return (
     <HomeContainer ref={sliderRef} className="keen-slider">
+      <Overflow />
       {products.map(product => {
         return (
-          <Product key={product.id} className="keen-slider__slide">
-            <Image src={product.imageUrl} width={520} height={480} alt="" />
-            <footer>
-              <strong>{ product.name }</strong>
-              <span>{ product.price }</span>
-            </footer>
-          </Product>
+          <Link href={`/product/${product.id}`} key={product.id}>
+            <Product className="keen-slider__slide">
+              <Image src={product.imageUrl} width={520} height={480} alt="" />
+              <footer>
+                <strong>{ product.name }</strong>
+                <span>{ product.price }</span>
+              </footer>
+            </Product>
+          </Link>
         )
       })}
 
