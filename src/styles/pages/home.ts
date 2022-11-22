@@ -7,15 +7,6 @@ export const HomeContainer = styled('main', {
     minHeight: 656,
 })
 
-export const Overflow = styled('div', {
-    width: '100vw',
-    height: '100vh',
-    position: 'fixed',
-    zIndex: 1,
-    justifyContent: 'center',
-    background: 'linear-gradient(90deg, rgba(18,18,20,1) 0%, rgba(45,45,45,0) 5%, rgba(45,45,45,0) 95%, rgba(18,18,20,1) 100%)',
-    alignItems: 'center'
-})
 
 export const Product = styled('div', {
     background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',

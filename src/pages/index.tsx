@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HomeContainer, Overflow, Product } from "../styles/pages/home";
+import { HomeContainer, Product } from "../styles/pages/home";
 
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ interface HomeProps {
     id: string;
     name: string;
     imageUrl: string;
-    price: number;
+    price: string;
   }[]
 }
 
@@ -30,7 +30,6 @@ export default function Home({ products }: HomeProps) {
   })
   return (
     <HomeContainer ref={sliderRef} className="keen-slider">
-      <Overflow />
       {products.map(product => {
         return (
           <Link href={`/product/${product.id}`} key={product.id}>
