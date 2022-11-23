@@ -45,7 +45,7 @@ export const ProductDetails = styled('div', {
         marginTop: '2.5rem',
         fontSize: '$md',
         lineHeight: 1.6,
-        color: '$gray300'
+        color: '$gray300',
     },
 
     button: {
@@ -59,8 +59,13 @@ export const ProductDetails = styled('div', {
         fontSize: '$md',
         transition: 'all 0.15s',
 
-        '&:hover': {
+        '&:not(:disabled):hover': {
             backgroundColor: '$green300',
+        },
+
+        '&:disabled': {
+            opacity: 0.6,
+            cursor: 'not-allowed',
         }
     },
 
