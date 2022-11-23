@@ -5,6 +5,12 @@ export const HomeContainer = styled('main', {
     width: '100%',
     marginLeft: 'auto',
     minHeight: 656,
+    height: '88vh',
+    alignItems: 'center',
+
+    a: {
+        height: '70vh'
+    }
 })
 
 
