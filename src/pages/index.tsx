@@ -34,6 +34,7 @@ export default function Home({ products }: HomeProps) {
       <Head>
         <title>Ignite Shop</title>
       </Head>
+      
       {products.map(product => {
         return (
           <Link href={`/product/${product.id}`} key={product.id} prefetch={false}>

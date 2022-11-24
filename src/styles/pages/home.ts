@@ -9,7 +9,7 @@ export const HomeContainer = styled('main', {
     alignItems: 'center',
 
     a: {
-        height: '70vh'
+        height: '55vh'
     }
 })
 
@@ -22,11 +22,12 @@ export const Product = styled('div', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: '-5vh',
 
     overflow: 'hidden',
 
     img: {
-        objectFit: 'cover'
+        objectFit: 'none'
     },
 
     footer: {
