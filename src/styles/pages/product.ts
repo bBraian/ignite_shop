@@ -1,12 +1,19 @@
 import { styled } from "..";
 
 export const ProductContainer = styled('main', {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    alignItems: 'stretch',
-    gap: '4rem',
+    variants: {
+        gridTemplateColumns: {
+          full: {gridTemplateColumns:'1fr 1fr'},
+          hd: {gridTemplateColumns:'1fr'},
+        },
+      },
     maxWidth: 1180,
-    margin: '0 auto'
+    margin: '0 auto',
+    height: '88vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+
 })
 
 export const ImageContainer = styled('div', {
@@ -23,6 +30,12 @@ export const ImageContainer = styled('div', {
     img: {
         objectFit: 'cover'
     }
+})
+
+export const ProductBox = styled('div', {
+    display: 'flex',
+    gap: '4rem',
+    maxWidth: 1180
 })
 
 export const ProductDetails = styled('div', {
